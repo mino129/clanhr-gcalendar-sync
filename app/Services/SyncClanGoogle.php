@@ -16,7 +16,7 @@ class SyncClanGoogle
         private readonly ClanHR $clanHR,
         private readonly GoogleCalendar $googleCalendar,
     ){
-        $this->clanHRData = $this->clanHR->getVacationDataDummy();
+        $this->clanHRData = $this->clanHR->getVacationData();
         $this->validateClanData();
         $this->currentGoogleEvents = $this->googleCalendar->getAllGCalendarEvents();
         $this->eventsThatExistDB = $this->calendarEvent->getEventsLookup();
